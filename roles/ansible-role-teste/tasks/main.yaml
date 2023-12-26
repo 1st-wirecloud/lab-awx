@@ -1,0 +1,16 @@
+---
+- name: verifica a existencia do arquivo
+  ansible.builtin.file:
+    path: /home/ansible/teste.txt
+    state: touch
+
+- name: Pega data e hora da VM
+  ansible.builtin.command: date
+  register: vm_date
+  changed_when: false
+
+- name: Insere data e hora no arquivo
+  ansible.builtin.lineinfile:
+    path: /home/ansible/teste.txt
+    line: "{{ vm_date.stdout }}"
+    create: yes
