@@ -1,0 +1,6 @@
+---
+- name: Hello World Playbook
+  hosts: all
+  tasks:
+    - name: Hello World
+      command: echo "Hello World"
