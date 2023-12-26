@@ -1,5 +1,5 @@
 ---
 - name: Criar arquivo de teste no linux
-  hosts: all
+  hosts: "{{ all }}"
   roles:
     - role: ansible-role-teste
