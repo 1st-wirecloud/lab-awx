@@ -1,5 +1,5 @@
 ---
 - name: Criar arquivo de teste no linux
-  hosts: "{{ host }}"
+  hosts: "{{ lab.wirecloud.com.br }}"
   roles:
     - role: ansible-role-teste
